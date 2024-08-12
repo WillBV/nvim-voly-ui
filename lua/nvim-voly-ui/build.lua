@@ -5,6 +5,7 @@ function Module.dev_build()
     vim.fn.jobstart("ls -al /home/will/",{
         on_stdout = function(j, d, e)
             output = output .. vim.fn.join(d)
+            output = output .. vim.fn.join(vim.inspect(d))
         end,
     })
     print(vim.inspect(output))
