@@ -9,6 +9,8 @@ function Module.dev_build()
             -- on_stdout = some_other_function,
             -- on_stderr = some_third_function
             on_stdout = function (id, data)
+                print(id)
+                print(data)
                 vim.print(id)
                 vim.print(data)
             end
