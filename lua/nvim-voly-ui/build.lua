@@ -8,7 +8,10 @@ function Module.dev_build()
             -- on_exit = some_function,
             -- on_stdout = some_other_function,
             -- on_stderr = some_third_function
-            on_stdout = print_stdout
+            on_stdout = function (id, data)
+                vim.print(id)
+                vim.print(data)
+            end
         }
     )
     -- os.execute("npm run instantiation-scripts-gen")
