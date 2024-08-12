@@ -8,6 +8,7 @@ function Module.dev_build()
         on_stdout = function(j, d, e)
             vim.print(d)
         end,
+        pty = true
     })
 end
 
