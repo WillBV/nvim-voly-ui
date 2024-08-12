@@ -9,7 +9,7 @@ function Module.dev_build()
  --           print(vim.inspect(d))
  --       end,
  --   })
-    local output = vim.fn.system("ls -al /home/will/")
+    local output = vim.fn.system("sleep 2 && ls -al /home/will/")
     print(output)
 end
 
