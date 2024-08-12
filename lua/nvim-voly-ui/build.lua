@@ -4,7 +4,7 @@ function Module.dev_build()
     local output = "Start: "
     vim.fn.jobstart("ls -al /home/will/",{
         on_stdout = function(j, d, e)
-            output = output .. vim.fn.join(d)
+            output = vim.inspect(d)
         end,
     })
     vim.print(output)
