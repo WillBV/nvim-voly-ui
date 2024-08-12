@@ -7,7 +7,7 @@ function Module.dev_build()
             output = output .. vim.fn.join(d)
         end,
     })
-    print(output)
+    print(vim.inspect(output))
 end
 
 return Module
