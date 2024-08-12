@@ -2,7 +2,7 @@ local Module = {}
 
 function Module.dev_build()
     vim.fn.jobstart(
-        'ls',
+        'ls -al',
         {
             -- cwd = '~/projects/voly-ui/ui-invoices/',
             -- on_exit = some_function,
