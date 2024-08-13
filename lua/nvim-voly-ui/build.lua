@@ -8,6 +8,7 @@ function Module.dev_build()
     end
 
 	vim.fn.jobstart("npm run instantiation-scripts-gen", {
+        stdout_buffered = true,
 		on_stdout = function(j, d, e)
 			--print(vim.inspect(d))
 			print("instantiation scripts run")
