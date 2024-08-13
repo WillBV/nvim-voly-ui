@@ -6,18 +6,22 @@ function Module.dev_build()
            print("Status")
         end
     end
+    
+    local output = ""
 
-	vim.fn.jobstart("npm run instantiation-scripts-gen", {
-        stdout_buffered = false,
-        pty = true,
-        width = 10,
-        height = 10,
+	local job = vim.fn.jobstart("npm run instantiation-scripts-gen", {
 		on_stdout = function(j, d, e)
 			--print(vim.inspect(d))
-			print("instantiation scripts run")
-            buildStatus(j, d, e)
+		--    print("instantiation scripts run")
+        --    buildStatus(j, d, e)
+            output = output .. vim.inspect(d)
 		end,
 	})
+    print(output)
+
+    -- vim.rpcrequest(job, "testMethod")
+
+
 --   vim.fn.jobstart("npm run build-dev", {
 --   	on_stdout = function(j, d, e)
 --   		print(vim.inspect(d))
