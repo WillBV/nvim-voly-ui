@@ -7,6 +7,7 @@ function Module.dev_build()
 			print("Instantiation Scripts Run")
 		end,
 	})
+    print("Starting Build")
     vim.fn.jobstart("npm run build-dev", {
         stdout_buffered = true,
     	on_stdout = function(j, d, e)
